@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="@drawable/touch_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_thumb"
+            android:layout_width="56dp"
+            android:layout_height="56dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/img_sex"
+                    android:layout_margin="3dp"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp" />
+                <TextView
+                    android:id="@+id/lbl_user"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textColor="@color/ncolorGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight="1.0"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/lbl_mottos"
+                        android:text="@string/lbl_zero"
+                        android:textColor="@color/ncolorGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/lbl_motto"
+                        android:text="@string/lbl_his_mottos"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:background="@drawable/touch_bg"
+                        android:textColor="@color/ncolorLightGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1.0"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/lbl_follows"
+                        android:text="@string/lbl_zero"
+                        android:textColor="@color/ncolorGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/lbl_follow"
+                        android:text="@string/lbl_his_follows"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:background="@drawable/touch_bg"
+                        android:textColor="@color/ncolorLightGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1.0"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/lbl_followers"
+                        android:text="@string/lbl_zero"
+                        android:textColor="@color/ncolorGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/lbl_follower"
+                        android:text="@string/lbl_his_followers"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:background="@drawable/touch_bg"
+                        android:textColor="@color/ncolorLightGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+        <ImageView
+            android:id="@+id/img_score"
+            android:src="@drawable/ic_chart"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+        <TextView
+            android:id="@+id/lbl_score"
+            android:text="0"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_score"
+            android:layout_toEndOf="@id/img_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/lbl_relation"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/img_relation"
+            android:layout_toLeftOf="@id/lbl_relation"
+            android:layout_toStartOf="@id/lbl_relation"
+            android:layout_centerVertical="true"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+    </RelativeLayout>
+</LinearLayout>

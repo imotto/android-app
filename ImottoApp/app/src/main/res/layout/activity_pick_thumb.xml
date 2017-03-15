@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar_general" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <LinearLayout
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/btn_gallery"
+                    android:background="@android:color/white"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/btn_title_gallery"
+                    android:drawableLeft="@drawable/ic_photos_outline"
+                    android:drawableStart="@drawable/ic_photos_outline"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/btn_camera"
+                    android:background="@android:color/white"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/btn_title_camera"
+                    android:drawableLeft="@drawable/ic_camera_outline"
+                    android:drawableStart="@drawable/ic_camera_outline"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
+            </LinearLayout>
+        </LinearLayout>
+        <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
+            android:id="@+id/img_thumb"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            app:shape_mode="circle"
+            app:stroke_color="@color/colorLightGray"
+            app:stroke_width="1px" />
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

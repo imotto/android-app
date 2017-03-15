@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="16dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/rank_view_bg"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_up"
+            android:src="@drawable/ic_plus_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:background="@drawable/rank_view_score_bg"
+            android:orientation="horizontal"
+            android:layout_width="80dp"
+            android:paddingLeft="8dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/coins"
+                android:layout_width="16dp"
+                android:contentDescription="score"
+                android:layout_gravity="center_vertical"
+                android:layout_height="16dp" />
+            <TextView
+                android:id="@+id/lbl_score"
+                android:text="0"
+                android:paddingStart="12dp"
+                android:paddingEnd="0dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_down"
+            android:src="@drawable/ic_minus_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

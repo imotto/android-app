@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+        <ImageView
+            android:id="@+id/img_thumb"
+            android:layout_gravity="center_vertical"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:id="@+id/lbl_user"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:textSize="@dimen/text_size_14sp"
+            android:textColor="@color/colorLightGray"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@id/lbl_content"
+        android:textColor="@color/ncolorDark"
+        android:textSize="@dimen/text_size_16sp"
+        android:lineSpacingExtra="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp">
+        <TextView
+            android:id="@+id/lbl_time"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/colorLightGray"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/btn_more"
+            android:src="@drawable/ic_more_outline"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/lbl_support"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/colorLightGray"
+            android:layout_toLeftOf="@id/btn_more"
+            android:layout_toStartOf="@id/btn_more"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/btn_up"
+            android:layout_toLeftOf="@id/lbl_support"
+            android:layout_toStartOf="@id/lbl_support"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

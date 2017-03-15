@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar_general" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lbl_notice"
+                android:textColor="@color/ncolorLightGray"
+                android:text="@string/lbl_reivew_gift"
+                android:textSize="@dimen/text_size_14sp"
+                android:lineSpacingExtra="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/rating_bar"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialRatingBar.RatingBar" />
+            <EditText
+                android:id="@+id/txt_review"
+                android:inputType="textMultiLine"
+                android:minLines="6"
+                android:gravity="top"
+                android:hint="@string/hint_review_gift"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditText" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

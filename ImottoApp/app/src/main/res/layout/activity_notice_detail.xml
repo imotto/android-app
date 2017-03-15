@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar_general" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="21dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <TextView
+            android:id="@+id/lbl_title"
+            android:textColor="@color/ncolorDark"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_thumb"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_email"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+            <TextView
+                android:id="@+id/lbl_status"
+                android:textSize="@dimen/text_size_12sp"
+                android:textColor="@color/ncolorLightGray"
+                android:layout_toEndOf="@id/img_thumb"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/lbl_time"
+                android:textSize="@dimen/text_size_12sp"
+                android:textColor="@color/ncolorLightGray"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/ncolorSpliter"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+        <TextView
+            android:id="@+id/lbl_content"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/ncolorGray"
+            android:textSize="@dimen/text_size_16sp"
+            android:lineSpacingExtra="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/lbl_link"
+            android:layout_marginTop="30dp"
+            android:textSize="@dimen/text_size_16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

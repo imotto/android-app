@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1ca8dd</color>
+    <color name="colorPrimaryDark">#1CA8DD</color>
+    <color name="colorAccent">#1CA8DD</color>
+    <color name="colorTabBg">#EEEEEE</color>
+    <color name="colorContentBg">#F5F5F5</color>
+    <color name="colorSuperLight">#F8F8F8</color>
+    <color name="colorLightDivider">#EFEFEF</color>
+    <color name="colorGray">#999999</color>
+    <color name="colorLightGray">#CCCCCC</color>
+    <color name="colorNavTint">#FFFFFF</color>
+    <color name="colorOrange">#FFA500</color>
+    <color name="colorGreen">#008000</color>
+    <color name="colorRecyclerViewDivider">#CDCDCD</color>
+    <color name="colorAlbumDetailHeader">#DDDDDD</color>
+    <color name="ncolorWhite">#ffffff</color>
+    <color name="ncolorSpliter">#e4e4e4</color>
+    <color name="ncolorGray">#646464</color>
+    <color name="ncolorDark">#333333</color>
+    <color name="ncolorLightGray">#999999</color>
+    <color name="ncolorLight">#cccccc</color>
+    <color name="ncolorDivider">#f4f4f8</color>
+    <color name="ncolorChatBg">#ecedf1</color>
+    <color name="ncolorChatTimeBg">#e3e4e8</color>
+    <color name="ncolorChatTime">#b0b0b0</color>
+</resources>

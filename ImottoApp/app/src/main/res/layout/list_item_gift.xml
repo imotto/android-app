@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="14dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_thumb"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_width="128dp"
+            android:layout_height="128dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lbl_title"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold"
+            android:textColor="@color/ncolorDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/lbl_info"
+            android:layout_below="@id/lbl_title"
+            android:textColor="@color/ncolorGray"
+            android:layout_marginTop="10dp"
+            android:maxLines="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/img_coins"
+            android:layout_below="@id/lbl_info"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/icon_gold"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:id="@+id/lbl_price"
+            android:textSize="@dimen/text_size_16sp"
+            android:textColor="@color/colorOrange"
+            android:layout_below="@id/lbl_info"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/img_coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>

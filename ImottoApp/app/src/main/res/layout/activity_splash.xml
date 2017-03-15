@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_spliter"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
+    <ImageView
+        android:layout_above="@id/view_spliter"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_splash_logo"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/img_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/app_copyright"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar_general" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+                </android.support.v7.widget.RecyclerView>
+                <com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader
+                    android:id="@+id/recycler_header"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_horizontal|top">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
+                            android:id="@+id/img_thumb"
+                            android:layout_marginBottom="8dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_person_white"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            app:shape_mode="circle"
+                            app:stroke_color="@android:color/white"
+                            app:stroke_width="1px" />
+                        <RelativeLayout
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_width="76dp"
+                            android:layout_height="56dp">
+                            <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
+                                android:id="@+id/img_sex"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:background="@android:color/white"
+                                android:src="@drawable/ic_male"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:padding="1dp"
+                                app:shape_mode="circle"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/lbl_user"
+                            android:textColor="@android:color/white"
+                            android:textAlignment="center"
+                            android:layout_below="@id/img_thumb"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp" />
+
+                    </RelativeLayout>
+
+                </com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>
+            </FrameLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

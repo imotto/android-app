@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="21dp"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:background="@drawable/touch_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lbl_title"
+                android:textStyle="bold"
+                android:textColor="@color/ncolorDark"
+                android:textSize="@dimen/text_size_16sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/lbl_summary"
+                android:layout_marginTop="14dp"
+                android:textSize="@dimen/text_size_14sp"
+                android:lineSpacingExtra="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/lbl_info"
+                android:layout_marginTop="16dp"
+                android:textSize="@dimen/text_size_12sp"
+                android:textColor="@color/colorLightGray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img_sel"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_circle_outline"
+            android:layout_marginStart="8dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

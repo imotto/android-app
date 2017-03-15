@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar_general" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:id="@+id/btn_sel_city"
+                android:clickable="true"
+                android:textColor="@color/colorPrimary"
+                android:text="选择城市"
+                android:padding="5dp"
+                android:textSize="@dimen/text_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/txt_addr"
+            android:hint="具体地址"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditText"/>
+
+        <EditText
+            android:id="@+id/txt_zip"
+            android:hint="邮政编码"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditText"/>
+
+        <EditText
+            android:id="@+id/txt_contact"
+            android:hint="收件人"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/txt_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditText"/>
+
+        <EditText
+            android:id="@+id/txt_mobile"
+            android:hint="收件人手机号码"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditText"/>
+
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

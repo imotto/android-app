@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="6dp"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_thumb"
+        android:layout_width="96dp"
+        android:layout_height="96dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lbl_title"
+                android:textColor="@color/ncolorDark"
+                android:ellipsize="end"
+                android:textSize="@dimen/text_size_16sp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/lbl_sub_title"
+            android:textSize="@dimen/text_size_14sp"
+            android:textColor="@color/ncolorGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/lbl_info"
+            android:textSize="@dimen/text_size_14sp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/ncolorLightGray"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lbl_status"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/ncolorLightGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/btn_receive"
+                android:clickable="true"
+                android:textSize="@dimen/text_size_16sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary"
+                android:text="奖品签收"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/btn_set_address"
+                android:clickable="true"
+                android:textSize="@dimen/text_size_16sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary"
+                android:text="填写寄送地址"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

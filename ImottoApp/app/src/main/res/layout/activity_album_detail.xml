@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar_general" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+                </android.support.v7.widget.RecyclerView>
+                <com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader
+                    android:id="@+id/recycler_header"
+                    android:background="@color/ncolorDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|top">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/recycler_view_ndivider"
+                        android:background="@android:color/white"
+                        android:padding="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/lbl_love"
+                                android:textSize="@dimen/text_size_14sp"
+                                android:textColor="@color/ncolorLightGray"
+                                android:layout_marginTop="3dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:id="@+id/img_love"
+                                android:src="@drawable/ic_relation_heart_outline"
+                                android:layout_toStartOf="@id/lbl_love"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp" />
+
+                            <TextView
+                                android:id="@+id/lbl_title"
+                                android:textColor="@color/ncolorDark"
+                                android:textSize="@dimen/text_size_16sp"
+                                android:layout_toStartOf="@id/img_love"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/lbl_summary"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:textColor="@color/ncolorGray"
+                            android:layout_marginTop="10dp"
+                            android:lineSpacingExtra="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <RelativeLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp">
+                            <TextView
+                                android:id="@+id/lbl_info"
+                                android:textSize="@dimen/text_size_12sp"
+                                android:textColor="@color/ncolorLightGray"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/lbl_time"
+                                android:textSize="@dimen/text_size_12sp"
+                                android:textColor="@color/ncolorLightGray"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/lbl_user"
+                                android:textSize="@dimen/text_size_12sp"
+                                android:textColor="@color/ncolorLightGray"
+                                android:layout_toStartOf="@id/lbl_time"
+                                android:layout_marginEnd="5dp"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>
+            </FrameLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

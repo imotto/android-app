@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="14dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/img_thumb"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_width="32dp"
+        android:layout_height="32dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/img_thumb"
+        android:layout_marginStart="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lbl_title"
+            android:textSize="@dimen/text_size_16sp"
+            android:textColor="@color/ncolorDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/lbl_info"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/text_size_14sp"
+            android:textColor="@color/ncolorLightGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/lbl_score"
+        android:textSize="@dimen/text_size_16sp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

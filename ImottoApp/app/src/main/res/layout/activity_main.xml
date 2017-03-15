@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="net.imotto.imottoapp.MainActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/app_name">
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <net.imotto.imottoapp.controls.MyViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="44dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginEnd="16dp"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_plus_white" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        style="@style/MyCustomTabLayout"/>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

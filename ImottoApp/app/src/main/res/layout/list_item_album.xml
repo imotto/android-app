@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="21dp"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:background="@drawable/touch_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/lbl_title"
+        android:textStyle="bold"
+        android:textColor="@color/ncolorDark"
+        android:textSize="@dimen/text_size_16sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/lbl_summary"
+        android:layout_marginTop="14dp"
+        android:textSize="@dimen/text_size_14sp"
+        android:lineSpacingExtra="8dp"
+        android:textColor="@color/ncolorGray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lbl_info"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/ncolorLightGray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/lbl_time"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/ncolorLightGray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/lbl_user"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/ncolorLightGray"
+            android:layout_marginEnd="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/lbl_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

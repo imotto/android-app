@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar_general" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/view_input"
+                android:background="@drawable/tab_bg"
+                android:gravity="end"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txt_review"
+                    android:layout_weight="1.0"
+                    android:hint="@string/hint_review"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/EditText" />
+                <ImageView
+                    android:id="@+id/btn_send"
+                    android:src="@drawable/ic_paperplane_outline_blue"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp" />
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh"
+                android:layout_above="@id/view_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/lbl_no_data"
+                        android:text="@string/lbl_no_data_msg"
+                        android:textColor="@color/colorLightGray"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical">
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

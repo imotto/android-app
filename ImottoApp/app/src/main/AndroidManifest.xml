@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="net.imotto.imottoapp">
+
+    <!-- Required -->
+    <permission
+        android:name="net.imotto.imottoapp.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="net.imotto.imottoapp.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name = "android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        tools:replace="android:allowBackup"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".ImottoApplication"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".activities.AddMottoActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.LovedMottoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.UserMottoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.UserAlbumActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.UserScoreActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.UserRevenueActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.UserBanActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.UserFollowersActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.UserFollowsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.UserInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.CollectMottoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.LovedAlbumActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.SettingActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.PickThumbActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.AlbumDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.AddAlbumActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.UpdateAlbumActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.GiftsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.GiftDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.NoticeDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.SelExchangeInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.VotesActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.MyGiftsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.ShowWebActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.ReviewGiftActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.RankBoardActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.AwardsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.AwardDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.SelAddressActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activities.AddAddressActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.ChatActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.ReviewActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.LoginActivity" android:screenOrientation="nosensor"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".activities.RegisterActivity"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".activities.ResetPasswordActivity"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="net.imotto.imottoapp" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService">
+            <!-- android:process=":mult" -->
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="net.imotto.imottoapp" />
+            </intent-filter>
+
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="net.imotto.imottoapp" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="net.imotto.imottoapp.receivers.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <category android:name="net.imotto.imottoapp" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="4de770a49e77b4b7f34ec7e1" /> <!--  </>值来自开发者平台取得的AppKey-->
+    </application>
+
+</manifest>
