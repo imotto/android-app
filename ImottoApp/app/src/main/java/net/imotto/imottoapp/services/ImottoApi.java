@@ -47,9 +47,8 @@ import cz.msebera.android.httpclient.Header;
 public class ImottoApi {
     private static final String TAG = "ImottoApi";
     //开发
-    //private static final String ApiUrl = "http://app.imotto.net/api/%s";
-    //生产
-    private static final String ApiUrl = "https://api.imotto.net/api/%s";
+    private static final String ApiUrl = "http://app.imotto.net/api/%s";
+
     private static ImottoApi instance = new ImottoApi();
     private static AsyncHttpClient client = new AsyncHttpClient();
     private ImottoApi(){
